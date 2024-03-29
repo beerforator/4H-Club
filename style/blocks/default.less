@@ -1,0 +1,221 @@
+// main: ../style.less
+
+html {
+    font-size: 20px;
+    //font-size: clamp(18px, 10wh, 32px);
+    color: #313131;
+}
+
+body {
+    font-family: "Golos Text", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    
+    font-weight: 400;
+    
+    margin: 0;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #F9F9F9;
+    //background-color: gray;
+}
+
+*,
+*:before,
+*:after {
+    //border: 1px solid black;
+    
+    box-sizing: border-box;
+    
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, a, li, p {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    color: #313131;
+    text-decoration: none;
+}
+
+li, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    
+    transition: all .1s ease-in-out;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+main {
+    width: 100%;
+}
+
+// Custom
+
+.container {
+    width: 100%;
+    max-width: 1262px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+img {
+    pointer-events: none;
+}
+
+// Titles
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 98%;
+    
+    color: #313131;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 2.7rem;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 120%;
+    
+    color: #313131;
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 135%;
+    
+    color: #313131;
+}
+
+h4 {
+    font-family: "Golos Text", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 120%;
+    color: #313131;
+}
+
+.red-accent {
+    display: inline;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    font-style: inherit;
+    text-transform: inherit;
+    line-height: inherit;
+    
+    color: #F54932;
+}
+
+.red-line {
+    display: inline;
+    text-decoration: line-through;
+	text-decoration-color: #F54932;
+}
+
+p {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: .9rem;
+    font-style: normal;
+    
+    color: #313131;
+}
+
+.sl-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    position: relative;
+}
+
+.sl-title a {
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    
+    width: 100%;
+    max-width: 280px;
+    color: #3057A2;
+}
+
+// Buttons 
+
+.btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: .8rem;
+    font-style: normal;
+    line-height: 130%;
+    
+    padding: 0.7rem 2.7em;
+    
+    border: 2px solid #1F1F1F;
+    border-radius: 66px;
+    
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &--drk {
+        width: 100%;
+        color: #FFFFFF;
+        background-color: #1F1F1F;
+        
+        &:hover {
+            color: #1F1F1F;
+            background-color: #FBCE51;
+            border: 2px solid #FBCE51;
+        }
+    }
+    
+    &--lght {
+        width: 100%;
+        color: #1F1F1F;
+        background-color: rgba(31, 31, 31, 0);
+        
+        &:hover {
+            color: #FFFFFF;
+            background-color: #1F1F1F;
+        }
+    }
+    
+    &--blue {
+        width: fit-content;
+        padding: 0.4rem .6rem;
+        
+        color: #3057A2;
+        border: 1px solid #3057A2;
+        background-color: rgba(48, 87, 162, 0);
+        
+        &:hover {
+            color: #FFFFFF;
+            background-color: #3057A2;
+        }
+    }
+}

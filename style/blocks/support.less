@@ -1,0 +1,75 @@
+// main: ../style.less
+
+.support {
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.support__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.hat {
+    display: flex;
+    flex-direction: row;
+    gap: 3.2rem;
+    
+    align-items: center;
+}
+
+.hat img {
+    width: 19.7rem;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 0; 
+}
+
+.content img {
+    width: 26.5rem;
+    height: auto;
+    
+    transform: translate(-40px, -45px);
+}
+
+.info-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.table {
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //grid-auto-rows: 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+
+.table-item {
+    min-width: 302px;
+    position: relative;
+    padding: 0.8rem;
+    
+    font-family: "Golos Text", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 120%;
+    color: rgba(49, 49, 49);
+    
+    outline: 1px solid #D0D0D0;
+    
+    &:nth-child(odd) {
+        padding: 0.8rem 0.8rem 0.8rem 0;
+        font-weight: 400;
+        color: rgba(49, 49, 49, .7);
+    }
+}
