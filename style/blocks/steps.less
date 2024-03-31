@@ -3,6 +3,7 @@
 .steps {
     width: 100%;
     margin: 6rem 0;
+    overflow: hidden;
 }
 
 .steps__inner {
@@ -32,6 +33,11 @@
         background: no-repeat url("../../images/plane.png");
         width: 401px;
         height: 235px;
+        
+        @media screen and (max-width: 1230px) {
+            bottom: 120px;
+        }
+
     }
 }
 

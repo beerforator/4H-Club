@@ -31,7 +31,7 @@
 }
 
 .content img {
-    width: 26.5rem;
+    width: 38%;
     height: auto;
     
     transform: translate(-40px, -45px);
@@ -51,6 +51,10 @@
     //grid-auto-rows: 1fr;
     align-items: center;
     overflow: hidden;
+    
+    @media screen and (max-width: 1040px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .table-item {
@@ -71,5 +75,11 @@
         padding: 0.8rem 0.8rem 0.8rem 0;
         font-weight: 400;
         color: rgba(49, 49, 49, .7);
+        
+        
+    }
+    
+    @media screen and (max-width: 1040px) {
+        padding: 0.8rem 0.8rem 0.8rem 0;
     }
 }
