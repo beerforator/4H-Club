@@ -9,7 +9,26 @@
 .steps__inner {
     display: flex;
     flex-direction: column;
-    gap: 2.7rem;    
+    gap: 2.7rem;  
+}
+
+.steps__inner .slider-container {
+    overflow: visible;
+    
+    @media screen and (max-width: 917px) {
+        overflow-x: scroll;
+        overflow: visible;
+        
+        margin: 9rem 0 0;
+    }
+}
+
+.steps__inner .slider-btns {
+    display: none;
+    
+    @media screen and (max-width: 917px) {
+        display: flex;
+    }
 }
 
 .steps-grid {
@@ -21,6 +40,8 @@
     
     grid-auto-flow: row;
     
+    transition: all ease-in-out 1s;
+    
     gap: 1rem;
     
     &::after {
@@ -30,14 +51,32 @@
         bottom: 0;
         right: -70px;
         
-        background: no-repeat url("../../images/plane.png");
+        background: no-repeat url("./../../images/plane.png");
+        background-size: cover;
         width: 401px;
         height: 235px;
         
         @media screen and (max-width: 1230px) {
             bottom: 120px;
+            width: calc(401px * .8);
+            height: calc(235px * .8);
         }
-
+        
+        @media screen and (max-width: 917px) {
+            width: calc(401px * .8);
+            height: calc(235px * .8);
+            
+            top: -140px;
+            left: 20px;
+        }
+    }
+    
+    @media screen and (max-width: 917px) {
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: auto auto;
+        
+        grid-row-gap: 0;
+        grid-auto-flow: column; 
     }
 }
 
@@ -65,8 +104,9 @@
         display: block;
         position: absolute;
         top: 0;
+        left: 0;
         
-        background: no-repeat url("../../images/filter.png");
+        background: no-repeat url("./../../images/filter.png");
         width: 100%;
         height: 100%;
         
@@ -79,6 +119,20 @@
     
     &:nth-child(7) {
         grid-column: span 2;
+    }
+    
+    @media screen and (max-width: 917px) {
+        grid-row-gap: 0;
+        grid-auto-flow: column;
+        min-width: 345px;
+            
+        &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7) {
+            padding-top: 3.1rem;
+        }
+        
+        &:nth-child(7), &:nth-child(6) {
+            grid-row: span 2;
+        }
     }
 }
 

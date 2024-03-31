@@ -2,8 +2,21 @@
 
 html {
     font-size: 20px;
-    //font-size: clamp(18px, 10wh, 32px);
+    //ont-size: 1.07vw;
+    //font-size: clamp(20px, 10wh, 50px);
     color: #313131;
+    
+    @media screen and (max-width: 1024px) {
+        font-size: 18px;
+    }
+    
+    @media screen and (max-width: 770px) {
+        font-size: 16px;
+    }
+    
+    @media screen and (max-width: 580px) {
+        font-size: 14px;
+    }
 }
 
 body {
@@ -37,6 +50,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, a, li, p {
+    width: fit-content;
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -103,6 +117,8 @@ h2 {
 }
 
 h3 {
+    display: inline;
+    
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-size: 1.8rem;
@@ -111,6 +127,22 @@ h3 {
     line-height: 135%;
     
     color: #313131;
+}
+
+.vis_h3 {
+    display: inline;
+    
+    @media screen and (max-width: 895px) {
+        display: none;
+    }
+}
+
+.hid_h3 {
+    display: none;
+    
+    @media screen and (max-width: 895px) {
+        display: inline;
+    }
 }
 
 h4 {
@@ -150,21 +182,33 @@ p {
 }
 
 .sl-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: inline;
+    width: fit-content;
+//    flex-direction: row;
+//    justify-content: space-between;
+//    gap: .6rem;
     
     position: relative;
+    
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
 .sl-title a {
     position: absolute;
-    top: 70px;
-    left: 300px;
+    top: 3.5rem;
+    left: 15rem;
     
     width: 100%;
     max-width: 280px;
     color: #3057A2;
+    
+    @media screen and (max-width: 600px) {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
 }
 
 // Buttons 
@@ -176,7 +220,7 @@ p {
     font-style: normal;
     line-height: 130%;
     
-    padding: 0.7rem 2.7em;
+    padding: 0.7rem 2.9em;
     
     border: 2px solid #1F1F1F;
     border-radius: 66px;
@@ -204,6 +248,12 @@ p {
         &:hover {
             color: #FFFFFF;
             background-color: #1F1F1F;
+            border: 2px solid #1F1F1F;
+        }
+        
+        @media screen and (max-width: 1160px) {
+            border: 2px solid #fff;
+            background-color: #fff;
         }
     }
     
@@ -225,10 +275,11 @@ p {
 .slider-btn {
     border: none;
     
-    width: 44px;
-    height: 44px;
+    width: 2.2rem;
+    height: 2.2rem;
     
-    background: no-repeat url("../../images/slider-btn.png");
+    background: no-repeat url("./../../images/slider-btn.png");
+    background-size: cover;
     
     transition: all .2s ease-in-out;
     
@@ -237,11 +288,13 @@ p {
     }
     
     &:hover {
-        background: no-repeat url("../../images/slider-btn-hover.png");
+        background: no-repeat url("./../../images/slider-btn-hover.png");
+        background-size: cover;
     }
     
     &:disabled {
-        background: no-repeat url("../../images/slider-btn-disabl.png");
+        background: no-repeat url("./../../images/slider-btn-disabl.png");
+        background-size: cover;
     }
 }
 
@@ -256,4 +309,9 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
 }

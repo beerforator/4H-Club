@@ -11,6 +11,10 @@
 .intro__inner {
     width: 100%;
     padding: 26px 0;
+    
+    @media screen and (max-width: 1000px) {
+        height: 100vh;
+    }
 }
 
 .gen_stuff {
@@ -23,6 +27,10 @@
     align-items: flex-start;
     
     margin-bottom: 5.6rem;
+    
+    @media screen and (max-width: 1000px) {
+        align-items:baseline;
+    }
 }
 
 .logo {
@@ -36,8 +44,8 @@
 }
 
 .logo img {
-    width: 92px;
-    height: 32px;
+    width: 4.63rem;
+    height: 1.6rem;
 }
 
 .logo-title {
@@ -56,48 +64,75 @@
     flex-direction: column;
     gap: 1.2rem;
     align-items: center;
+    
+    @media screen and (max-width: 1000px) {
+        margin: 0 auto
+    }
+}
+
+.greet-stuff_h1 {
+    @media screen and (max-width: 450px) {
+        font-size: 2.5rem;
+    }
 }
 
 .greet-btns {
     width: 100%;
+    max-width: 542px;
     
     display: flex;
     flex-direction: row;
     gap: .8rem;
 
     margin-top: .8rem;
+    
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
 .bckgrnd-stuff {
     width: 100%;
-    max-width: 1628px;
+    max-width: 1682px;
     height: 100%;
     
     position: absolute;
     top: 0;
     right: 50%;
     transform: translateX(50%);
+    
+    font-size: 1rem;
+    
+    @media screen and (max-width: 580px) {
+        font-size: .775rem;
+    }
 }
 
 .elpc {
     position: absolute;
     z-index: 1;
     
-    width: 752px;
-    height: 675px;
+//    width: 752px;
+//    height: 675px;
     
-    top: 0;
-    right: 0;
+    width: 37.6em;
+    height: 33.75em;
+    
+    bottom: 5.05em;
+    right: -1.3em;
 }
 
 .back-plan {
     position: absolute;
     z-index: 2;
     
-    width: 478px;
-    height: 371px;
+//    width: 478px;
+//    height: 371px;
     
-    bottom: 164px;
+    width: 23.9em;
+    height: 18.55em;
+    
+    bottom: 8.2em;
     right: 11.5%;
 }
 
@@ -106,9 +141,11 @@
     z-index: 3;
     
     
-    //+adaptive
-    width: 1682px;
-    height: 441px;
+    //width:  1682px;
+    //height: 441px;
+    
+    width: 84.1em;
+    height: 22.05em;
     
     bottom: 0;
     right: -160px;
@@ -118,24 +155,29 @@
     position: absolute;
     z-index: 5;
     
-    width: 487px;
-    height: 218px;
+//    width: 487px;
+//    height: 218px;
+    
+    width: 24.35em;
+    height: 10.9em;
     
     bottom: 0;
-    right: 45px;
+    right: 2.25em;
+    
+    @media screen and (max-width: 580px) {
+        right: -5em;
+    }
 }
 
 .filter {
     position: absolute;
     z-index: 4;
     
-    width: 1921px;
-    height: 700px;
-    
+    background: url("./../../images/filter.png");
+    width: 1000%;
+    height: 100%;
     mix-blend-mode: color-burn;
     opacity: .4;
-    
-    bottom: 0;
-    right: -276px;
+    left: -1000px;
 }
 
